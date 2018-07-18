@@ -5,7 +5,7 @@ header-img: img/post-bg-coffee.jpeg
 email: drowtram@163.com
 description: "个人技术资料整理"
 keyword: "Alee, Alee Blog, Android, 安卓, 锤子, Smartisan, Google, 小米"
-url: "http://alee.wang"          # your host, for absolute URL
+url: "http://www.aleej.com"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/drowtram/drowtram.github.io.git" # you code repository
 
@@ -78,7 +78,7 @@ gitalk:
 
 # Google Analytics
 ga_track_id: 'UA-121883888-1'            # Format: UA-xxxxxx-xx
-ga_domain: alee.wang               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+ga_domain: www.aleej.com               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 
