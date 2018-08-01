@@ -89,7 +89,7 @@ tags:
 
    来监听RecyclerView的滚动距离，正常情况下是没有问题的，但是一旦RecyclerView的数据源变了的时候，比如筛选条件变了，需要清除之前的数据，然后重新添加新的数据到RecyclerView里面去，这时候记录的滚动距离就不准了。
 
-   然后采用`totalDy = recyclerView.computeVerticalScrollOffset();`的方式发现当header在屏幕内从滚动到屏幕外时，这个totalDy数值会突然变小，这TM就尴尬了，弃之。
+   然后采用`totalDy = recyclerView.computeVerticalScrollOffset();`的方式发现当header从屏幕内滚动到屏幕外时，这个totalDy数值会突然变小，这TM就尴尬了，弃之。
 
    后面采用自定义RecyclerView的LinearLayoutManager来计算滚动距离，但是在滑动的时候特别消耗性能，滑动卡顿，故只有放弃。
 
