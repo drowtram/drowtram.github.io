@@ -4,7 +4,7 @@ title:      一个关于CoordinatorLayout+AppBarLayout+RecyclerView+Header的滚
 subtitle:   折腾了3天才找出问题的bug
 date:       2018-07-21
 author:     Alee
-header-img: img/head/gradle.png
+header-img: img/head/code.jpg
 catalog: true
 tags:
     - bug记录
