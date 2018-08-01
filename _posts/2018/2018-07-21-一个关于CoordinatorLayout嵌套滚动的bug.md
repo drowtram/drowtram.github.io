@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      一个关于CoordinatorLayout嵌套滚动的bug
-subtitle:   CoordinatorLayout+AppBarLayout+RecyclerView+Header
+subtitle:   CoordinatorLayout + AppBarLayout + RecyclerView+Header
 date:       2018-07-21
 author:     Alee
 header-img: img/head/code.jpg
@@ -12,7 +12,7 @@ tags:
 
 # 一个关于CoordinatorLayout嵌套滚动的bug
 
-> 采用CoordinatorLayout+AppBarLayout+RecyclerView+Header引出的一个bug
+> 采用CoordinatorLayout + AppBarLayout + RecyclerView+Header引出的一个bug
 
 
 
