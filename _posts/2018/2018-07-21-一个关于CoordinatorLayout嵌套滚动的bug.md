@@ -22,7 +22,7 @@ tags:
 
 ## Bug简述
 
-如上图所展示的效果，首页第一次在RecyclerView区域外是响应手动滑动事件的，但是一旦在底部RecyclerView区域有滚动后，再在顶部滑动就死活滑不动的bug，只能在RecyclerView区域往上滑。首页这个布局是完完全全按照[Google的示例代码](https://developer.android.com/reference/android/support/design/widget/AppBarLayout)来写的一个嵌套滚动布局，采用的是CoordinatorLayout+AppBarLayout+RecyclerView的形式布局的，然后在RecyclerView里面加入了一个Header，由于逻辑需要，这个Header在特定条件下才显示出来。
+如上图所展示的效果，首页第一次在RecyclerView区域外是响应手动滑动事件的，但是一旦在底部RecyclerView区域有滚动后，再在顶部滑动就死活滑不动的bug，只能在RecyclerView区域往上滑。首页这个布局是完完全全按照[Google的示例代码](https://developer.android.com/reference/android/support/design/widget/AppBarLayout){:target="_blank"}来写的一个嵌套滚动布局，采用的是CoordinatorLayout+AppBarLayout+RecyclerView的形式布局的，然后在RecyclerView里面加入了一个Header，由于逻辑需要，这个Header在特定条件下才显示出来。
 
 
 
@@ -101,5 +101,5 @@ tags:
 
    * 
 
-[^1]: 原生RecyclerView是无法添加header的，本文是通过[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)来添加的header
+[^1]: 原生RecyclerView是无法添加header的，本文是通过[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)来{:target="_blank"}添加的header
 [^2]: 此隐藏包含整个header父布局隐藏或header父布局不隐藏，但是高度是包裹内容且子布局全部隐藏
