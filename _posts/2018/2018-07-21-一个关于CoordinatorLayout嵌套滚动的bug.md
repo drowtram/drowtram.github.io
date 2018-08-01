@@ -67,7 +67,7 @@ tags:
 
 1. **Google搜索**
 
-   打开Google搜索，我突然之间不知道怎么形容这个bug，犹豫了片刻之后，输入了*coordinator appbar recyclerview 滑动一次就失效* 一番查找后，没有任何帮助，于是乎更换搜索关键词 *coodinator appbar recyclerview scroll site:stackoverflow.com* 翻遍了StackOverFlow也没找到类似的问题。于是决定放弃搜索。
+   打开Google搜索，我突然之间不知道怎么形容这个bug，犹豫了片刻之后，输入了`coordinator appbar recyclerview 滑动一次就失效` 一番查找后，没有任何帮助，于是乎更换搜索关键词 `coodinator appbar recyclerview scroll site:stackoverflow.com` 翻遍了StackOverFlow也没找到类似的问题。于是决定放弃搜索。
 
 2. **替换布局**
 
