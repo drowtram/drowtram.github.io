@@ -22,7 +22,7 @@ tags:
 
 ## Bug简述
 
-如上图所展示的效果，首页第一次在RecyclerView区域外是响应手动滑动事件的，但是一旦在底部RecyclerView区域有滚动后，再在顶部滑动就死活滑不动的bug，只能在RecyclerView区域往上滑。首页这个布局是完完全全按照[Google的示例代码](https://developer.android.com/reference/android/support/design/widget/AppBarLayout){:target="_blank"}来写的一个嵌套滚动布局，采用的是CoordinatorLayout+AppBarLayout+RecyclerView的形式布局的，然后在RecyclerView里面加入了一个Header，由于逻辑需要，这个Header在特定条件下才显示出来。
+如上图所展示的效果，首页第一次在RecyclerView区域外是响应手动滑动事件的，但是一旦在底部RecyclerView区域有滚动后，再在顶部滑动就死活滑不动的bug，只能在RecyclerView区域往上滑。首页这个布局是完完全全按照[Google的示例代码](https://developer.android.com/reference/android/support/design/widget/AppBarLayout){:target="_blank"}来写的一个嵌套滚动布局，采用的是CoordinatorLayout+AppBarLayout+RecyclerView的形式布局的，然后在RecyclerView里面加入了一个Header[^1]，由于逻辑需要，这个Header在特定条件下才显示出来。
 
 
 
