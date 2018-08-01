@@ -101,5 +101,5 @@ tags:
 
    * 
 
-[^1]: 原生RecyclerView是无法添加header的，本文是通过[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)来{:target="_blank"}添加的header
+[^1]: 原生RecyclerView是无法添加header的，本文是通过[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper){:target="_blank"}来添加的header
 [^2]: 此隐藏包含整个header父布局隐藏或header父布局不隐藏，但是高度是包裹内容且子布局全部隐藏
