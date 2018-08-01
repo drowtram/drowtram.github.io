@@ -63,7 +63,7 @@ tags:
 
 ## Bug解决
 
-首先想到了几个解决方式
+回顾这三天来的解决途径：
 
 1. **Google搜索**
 
@@ -71,9 +71,9 @@ tags:
 
 2. **替换布局**
 
-   决定全部采用RecyclerView来实现，修改布局代码，然后把appbar部分的布局，通过header的方式add到RecyclerView里面，一顿操作后，引出了一个新的问题：因为产品有一个需求是当header滚出屏幕外时，header中的一个子布局需要固定到屏幕顶部还要改变样式，当header重新滚回到屏幕内时，又需要还原header的子布局。要实现这样的逻辑，就得要监听RecyclerView的实时滚动距离，当滚动到header的高度时，做相应的处理。
+   依照惹不起躲得起的原则决定全部采用RecyclerView来实现，修改布局代码，然后把appbar部分的布局，通过header的方式add到RecyclerView里面，一顿操作后，引出了一个新的问题：因为产品有一个需求是当header滚出屏幕外时，header中的一个子布局需要固定到屏幕顶部还要改变样式，当header重新滚回到屏幕内时，又需要还原header的子布局。要实现这样的逻辑，就得要监听RecyclerView的实时滚动距离，当滚动到header的高度时，做相应的处理。
 
-   逻辑没问题，可是要实现起来发现不是那么简单的，要监听RecyclerView的实时滚动距离，这其中的坑不少，
+   逻辑没问题，可是要实现起来发现不是那么简单滴，要监听RecyclerView的实时滚动距离，这其中的坑不少，
 
    先是通过：
 
@@ -87,19 +87,18 @@ tags:
            });
    ```
 
-   来监听RecyclerView的滚动距离，正常情况去是没有问题的，但是一旦对RecyclerView的数据做刷新的时候，比如筛选条件变了，需要清除之前的数据，然后重新添加新的数据到RecyclerView里面去，这时候记录的滚动距离就不准了。
+   来监听RecyclerView的滚动距离，正常情况下是没有问题的，但是一旦RecyclerView的数据源变了的时候，比如筛选条件变了，需要清除之前的数据，然后重新添加新的数据到RecyclerView里面去，这时候记录的滚动距离就不准了。
 
-   然后采用`totalDy = recyclerView.computeVerticalScrollOffset();`的方式发现当header在屏幕内从滚动到屏幕外时，这个totalDy数值会突然变小，这TM就尴尬了，放弃。
+   然后采用`totalDy = recyclerView.computeVerticalScrollOffset();`的方式发现当header在屏幕内从滚动到屏幕外时，这个totalDy数值会突然变小，这TM就尴尬了，弃之。
 
    后面采用自定义RecyclerView的LinearLayoutManager来计算滚动距离，但是在滑动的时候特别消耗性能，滑动卡顿，故只有放弃。
 
 3. **回归嵌套滚动，逐个排查**
 
-   既然RecyclerView走不通，只能回归到最开始的CoordinatorLayout+AppBarLayout+RecyclerView的形式来做了，至少RecyclerView还是能滑动的。但是问题还是需要解决，于是我单独新建了一个Model，然后套用CoordinatorLayout+AppBarLayout+RecyclerView，在代码中给RecyclerView添加适配器后，测试滚动没有问题。既然这个布局没问题，那就是代码中出了问题，于是把首页的代码逐一的添加到Module中，最后测试到**当给RecyclerView添加header[^1]后，而恰好header的布局又是整个隐藏的，就会出现这个问题**。
+   既然RecyclerView走不通，只能回归到最开始的CoordinatorLayout+AppBarLayout+RecyclerView的形式来做了，至少RecyclerView还是能滑动的。但是问题还是需要解决，于是我单独新建了一个Model，然后套用CoordinatorLayout+AppBarLayout+RecyclerView，在代码中给RecyclerView添加适配器后，测试滚动没有问题。既然滚动没有问题，那就意味着这个布局没问题，那就是代码中出了问题，于是把首页的代码逐一的添加到Module中，最后测试到**当给RecyclerView添加header[^1]后，而恰好header的布局又是整个隐藏的，就会出现这个问题**。
 
-   既然找到问题了，那就好说了，因为header被添加后，不能直接隐藏[^2]，那就在代码中把所有header隐藏的部分全部改为header的所有子布局全部隐藏，header不隐藏且header的高度是包裹内容但是必须有一个最低高度，最后折腾了三天的结果是：**在header的父布局中添加`android:minHeight="0.5dp"`即可**。
+   既然找到问题了，那就好说了，因为header被添加后，不能直接隐藏[^2]，那就在代码中把所有header隐藏的部分全部改为header的所有子布局全部隐藏，header不隐藏且header的高度是包裹内容但是必须有一个最低高度。最后折腾了三天的结果是：**在header的父布局中添加`android:minHeight="0.5dp"`即可**。
 
-   * 
 
 [^1]: 原生RecyclerView是无法添加header的，本文是通过[BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper){:target="_blank"}来添加的header
 [^2]: 此隐藏包含整个header父布局隐藏或header父布局不隐藏，但是高度是包裹内容且子布局全部隐藏
