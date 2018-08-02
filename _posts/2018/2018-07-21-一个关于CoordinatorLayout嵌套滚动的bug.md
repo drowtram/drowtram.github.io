@@ -10,7 +10,7 @@ tags:
     - bug记录
 ---
 
-# 一个关于CoordinatorLayout嵌套滚动的bug
+
 
 > 采用CoordinatorLayout + AppBarLayout + RecyclerView + Header引出的一个bug
 
