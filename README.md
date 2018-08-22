@@ -59,7 +59,7 @@ Jekyll官方网站还有很多的参数可以调，比如设置文章的链接�
 
 yaml 头文件长这样:
 
-```
+```yml
 ---
 layout:     post
 title:      定时器 你真的会使用吗？
@@ -121,7 +121,7 @@ featured-condition-size: 1     # A tag will be featured if the size of it is mor
 	# weibo_username:   username
 
 
-​	
+	
 
 ![](http://ww4.sinaimg.cn/large/006tKfTcgy1fgrgbgf77aj308i02v748.jpg)
 
@@ -154,12 +154,18 @@ HTML5幻灯片的排版：
 
 这部分是用于占用html格式的幻灯片的，一般用到的是 Reveal.js, Impress.js, Slides, Prezi 等等.我认为一个现代化的博客怎么能少了放html幻灯的功能呢~
 
-其主要原理是添加一个 `iframe`，在里面加入外部链接。你可以直接写到头文件里面去，详情请见下面的yaml头文件的写法。
+其主要原理是添加一个 `iframe`，在里面加入外部链接。你可以直接写到博文头文件里面去，详情请见下面的yaml头文件的写法。
 
-```
+```yml
 ---
 layout:     keynote
-iframe:     "http://huangxuan.me/js-module-7day/"
+title:      "RxJava操作符"
+subtitle:   "RxJava常用操作符大全"
+iframe:     "//aleej.com/keynote_alee/pages/rxjava"
+date:       2018-07-14
+author:     "Alee"
+tags:
+    - RxJava
 ---
 ```
 
