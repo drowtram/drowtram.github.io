@@ -95,7 +95,7 @@ tags:
 
 3. **回归嵌套滚动，逐个排查**
 
-   既然RecyclerView走不通，只能回归到最开始的CoordinatorLayout + AppBarLayout + RecyclerView的形式来做了，至少RecyclerView还是能滑动的。但是问题还是需要解决，于是我单独新建了一个Model，然后套用CoordinatorLayout + AppBarLayout + RecyclerView，在代码中给RecyclerView添加适配器后，测试滚动没有问题。既然滚动没有问题，那就意味着这个布局没问题，那就是代码中出了问题，于是把首页的代码逐一的添加到Module中，最后测试到**当给RecyclerView添加header[^1]后，而恰好header的布局又是整个隐藏的，就会出现这个问题**。
+   既然RecyclerView走不通，只能回归到最开始的CoordinatorLayout + AppBarLayout + RecyclerView的形式来做了，至少RecyclerView还是能滑动的。但是问题还是需要解决，于是我单独新建了一个Module，然后套用CoordinatorLayout + AppBarLayout + RecyclerView，在代码中给RecyclerView添加适配器后，测试滚动没有问题。既然滚动没有问题，那就意味着这个布局没问题，那就是代码中出了问题，于是把首页的代码逐一的添加到Module中，最后测试到**当给RecyclerView添加header[^1]后，而恰好header的布局又是整个隐藏的，就会出现这个问题**。
 
    既然找到问题了，那就好说了，因为header被添加后，不能直接隐藏[^2]，那就在代码中把所有header隐藏的部分全部改为header的所有子布局全部隐藏，header不隐藏且header的高度是包裹内容但是必须有一个最低高度。最后折腾了三天的结果是：**在header的父布局中添加`android:minHeight="0.5dp"`即可**。
 
