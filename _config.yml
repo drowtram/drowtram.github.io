@@ -5,7 +5,7 @@ header-img: img/post-bg-coffee.jpeg
 email: drowtram@163.com
 description: "个人学习笔记技术整理"
 keyword: "Alee, Alee Notebook, Android, 安卓, 笔记本"
-url: "http://www.aleej.com"          # your host, for absolute URL
+url: "https://aleej.com"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/drowtram/drowtram.github.io.git" # you code repository
 
