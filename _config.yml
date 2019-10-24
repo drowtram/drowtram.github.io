@@ -1,17 +1,17 @@
 # Site settings
 title: Alee
-SEOTitle: Alee的博客 | Alee Blog
+SEOTitle: Alee在线笔记 | Alee NoteBook
 header-img: img/post-bg-coffee.jpeg
 email: drowtram@163.com
-description: "个人技术资料整理"
-keyword: "Alee, Alee Blog, Android, 安卓, 博客"
+description: "个人学习笔记技术整理"
+keyword: "Alee, Alee Notebook, Android, 安卓, 笔记本"
 url: "http://www.aleej.com"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/drowtram/drowtram.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Android工程师一枚"
+sidebar-about-description: "Android开发"
 sidebar-avatar: /img/cannondale_twitter.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
