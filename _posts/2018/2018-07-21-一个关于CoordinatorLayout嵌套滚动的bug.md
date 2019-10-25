@@ -18,7 +18,7 @@ tags:
 
 ## Bug展示
 
-![bug展示](https://ws1.sinaimg.cn/large/a3888eecly1ftu1opf35fg20go0tnkjq.gif){:width="400"} 
+![bug展示](https://aleej.com/img/gif/kkstudent_scroll_bug.gif){:width="400"} 
 
 ## Bug简述
 
