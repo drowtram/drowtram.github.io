@@ -1,0 +1,14 @@
+---
+layout: page
+title: Search
+description: Search any article here.
+permalink: /search/
+---
+<form id="blog-search" class="search-form" role="search" action="{{ site.baseurl }}/search/" data-index-url="{{ site.baseurl }}/search.json">
+    <label for="search-query">搜索文章</label>
+    <input id="search-query" name="q" type="search" placeholder="搜索标题、标签或正文…" autocomplete="off" aria-describedby="search-status">
+</form>
+<p id="search-status" class="post-meta search-status" role="status" aria-live="polite">输入关键词，搜索全部文章。</p>
+<section id="search-results" aria-label="搜索结果"></section>
+<noscript><p>搜索需要启用 JavaScript。也可以查看<a href="{{ site.baseurl }}/posts/">全部文章</a>或<a href="{{ site.baseurl }}/archives/">文章归档</a>。</p></noscript>
+<script src="{{ site.baseurl }}/js/search.js" defer></script>

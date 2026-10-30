@@ -1,0 +1,13 @@
+/* Min Light colors for Jekyll's Rouge tokens; layout lives in paper.css. */
+.highlight { color: #24292e; }
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cp, .highlight .cs, .highlight .ch, .highlight .cpf { color: #c2c3c5; }
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .ow { color: #d32f2f; }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh, .highlight .si, .highlight .sr, .highlight .ss, .highlight .sx { color: #22863a; }
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .il, .highlight .nb, .highlight .bp, .highlight .nc, .highlight .no { color: #1976d2; }
+.highlight .nf, .highlight .fm, .highlight .nd, .highlight .na, .highlight .nt { color: #6f42c1; }
+.highlight .o, .highlight .p { color: #212121; }
+.highlight .gd { background: #ffeef0; }
+.highlight .gi { background: #e6ffed; }
+.highlight .err { color: #d32f2f; }
+.highlight .ge { font-style: italic; }
+.highlight .gs { font-weight: 600; }

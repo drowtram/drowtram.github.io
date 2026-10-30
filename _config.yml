@@ -1,20 +1,12 @@
 # Site settings
 title: Alee
 SEOTitle: Alee在线笔记 | Alee NoteBook
-header-img: img/post-bg-coffee.jpeg
 email: drowtram@163.com
 description: "个人学习笔记技术整理"
 keyword: "Alee, Alee Notebook, Android, 安卓, 笔记本"
 url: "https://aleej.com"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/drowtram/drowtram.github.io.git" # you code repository
-
-# Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Android开发"
-sidebar-avatar: /img/cannondale_twitter.png      # use absolute URL, seeing it's used in both `/` and `/about/`
-
-
 
 # SNS settings
 RSS: false
@@ -32,14 +24,14 @@ twitter_username:   drowtram
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+exclude: ["README.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 
 
@@ -91,7 +83,7 @@ featured-condition-size: 1              # 相同标签数量大于这个数，�
 
 
 # Progressive Web Apps
-chrome-tab-theme-color: "#000000"
+chrome-tab-theme-color: "#fdfdfd"
 service-worker: true
 
 

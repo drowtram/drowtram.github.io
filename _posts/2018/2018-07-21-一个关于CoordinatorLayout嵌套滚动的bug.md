@@ -4,7 +4,6 @@ title:      一个关于CoordinatorLayout嵌套滚动的bug
 subtitle:   CoordinatorLayout + AppBarLayout + RecyclerView+Header
 date:       2018-07-21
 author:     Alee
-header-img: img/head/code.jpg
 catalog: true
 tags:
     - bug记录
@@ -18,7 +17,7 @@ tags:
 
 ## Bug展示
 
-![bug展示](https://aleej.com/img/gif/kkstudent_scroll_bug.gif){:width="400"} 
+![bug展示](/img/gif/kkstudent_scroll_bug.gif){:width="400"}
 
 ## Bug简述
 

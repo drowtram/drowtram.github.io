@@ -4,7 +4,6 @@ title:      解决Android Studio依赖库版本不一致的问题
 subtitle:   强制指定第三方依赖库内部所依赖的库的版本号
 date:       2018-07-15
 author:     Alee
-header-img: img/head/gradle.png
 catalog: true
 tags:
     - gradle
@@ -19,7 +18,7 @@ tags:
 
 就是它...
 
-![](https://ws1.sinaimg.cn/large/a3888eecly1ftjxjqbop3j21q203u77w.jpg)
+![](/img/posts/a3888eecly1ftjxjqbop3j21q203u77w.jpg)
 
 
 

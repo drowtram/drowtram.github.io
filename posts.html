@@ -1,0 +1,14 @@
+---
+layout: page
+title: Posts
+description: All the articles I've posted.
+permalink: /posts/
+---
+{% for post in site.posts %}
+<article class="post-preview">
+    <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <p class="post-meta"><span class="fa fa-calendar-o" aria-hidden="true"></span> <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %b, %Y" }}</time></p>
+    {% if post.subtitle %}<p class="post-subtitle">{{ post.subtitle }}</p>{% endif %}
+    <p class="post-content-preview">{{ post.content | strip_html | truncate: 160 }}</p>
+</article>
+{% endfor %}
